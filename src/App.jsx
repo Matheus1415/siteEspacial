@@ -15,6 +15,7 @@ const FundoGradiente = styled.div`
 const Container = styled.div`
   width: 100%;
   display: flex;
+
 `;
 
 function App() {
@@ -23,8 +24,10 @@ function App() {
     <FundoGradiente>
       <EstiloGlobal /> 
       <Cabesalho/>
-      <Lateral/>
-      <Banner backgroundImage={ImagemBanner} texto="Seja bem Vindo á Space"/>
+      <Container>
+        <Lateral/>
+        <Banner backgroundImage={ImagemBanner} texto="Seja bem Vindo á Space"/>
+      </Container>
     </FundoGradiente>
   )
 }

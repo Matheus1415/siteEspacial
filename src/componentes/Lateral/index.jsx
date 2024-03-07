@@ -6,6 +6,7 @@ const ListaEstilizada = styled.ul`
     list-style-type: none;
     padding: 0;
     margin: 0;
+    width: 100%;
     max-width: 25%;
     padding: 20px;
 

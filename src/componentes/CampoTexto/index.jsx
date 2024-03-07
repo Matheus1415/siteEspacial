@@ -31,8 +31,11 @@ const CampoTextoEstilizado = styled.input`
 `
 
 const IconeLupa = styled.img`
+    width: 100%;
+    max-width: 40px!important;
+    height: 40px!important;
     position: absolute;
-    top: 30px;
+    top: 25px;
     right: 30px;
     width: 38px;
     height: 38px;
