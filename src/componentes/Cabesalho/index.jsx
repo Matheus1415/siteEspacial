@@ -8,6 +8,7 @@ width: 100%;
     display: flex;
     justify-content: space-between;
     height: 100px;
+    
 
     & img{
         width: 100%;

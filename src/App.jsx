@@ -11,8 +11,9 @@ const FundoGradiente = styled.div`
   min-height: 100vh;
 `
 
-function App() {
 
+
+function App() {
 
   return (
     <FundoGradiente>
