@@ -47,7 +47,7 @@ const Figure = styled.figure`
             }
 
             & > #Curtir{  background: transparent url('public/icones/favorito-ativo.png') no-repeat;  }
-            & > #Expandir{  background: transparent url('public/icones/favorito-ativo.png') no-repeat;  }
+            & > #Expandir{  background: transparent url('public/icones/expandir.png') no-repeat;  }
 
         }
 
@@ -60,8 +60,8 @@ export const Imagem = ({ foto }) => {
             <img src={`public/public/${foto.path}`} alt="" />
             <figcaption>
                 <span>
-                    <h3>Titulo</h3>
-                    <p>Fontes</p>
+                    <h3>{foto.titulo}</h3>
+                    <p>{foto.fonte}</p>
                 </span>
                 <footer>
                     <button id="Curtir"></button>
