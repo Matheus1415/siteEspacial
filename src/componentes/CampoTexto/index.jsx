@@ -1,5 +1,5 @@
 import { styled } from "styled-components"
-import search from '/public/search.png'
+import search from './search.png'
 
 const ContainerEstilizado = styled.div`
     position: relative;
@@ -8,7 +8,6 @@ const ContainerEstilizado = styled.div`
 
 
 const CampoTextoEstilizado = styled.input`
-    margin: 20px;
     height: 56px;
     padding: 12px 16px;
     border-radius: 10px;
@@ -21,22 +20,12 @@ const CampoTextoEstilizado = styled.input`
     font-weight: 400;
     font-size: 20px;
     line-height: 20px;
-
-    &:focus{
-        outline: none;
-    }
-
-    & ::placeholder{color:white;}
-
 `
 
 const IconeLupa = styled.img`
-    width: 100%;
-    max-width: 40px!important;
-    height: 40px!important;
     position: absolute;
-    top: 25px;
-    right: 30px;
+    top: 10px;
+    right: 10px;
     width: 38px;
     height: 38px;
 `;
@@ -44,7 +33,7 @@ const IconeLupa = styled.img`
 const CampoTexto = (props) => {
     return (
         <ContainerEstilizado>
-            <CampoTextoEstilizado placeholder="O que você procura?" {...props} />
+            <CampoTextoEstilizado {...props} />
             <IconeLupa src={search} alt="ícone de lupa" />
         </ContainerEstilizado>
     )
