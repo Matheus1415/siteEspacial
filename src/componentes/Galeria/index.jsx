@@ -13,14 +13,18 @@ const SecaoFluida = styled.section`
     flex-grow: 1;
 `;
 
-export const Galeria = ({fotos}) =>{
+export const Galeria = ({fotos, aoFotoSelecionada}) =>{
     return(
         <>
             <Tags/>
             <GaleriaContainer>
                 <SecaoFluida>
                     <Titulo>Navegue pela Galeria</Titulo>
-                    {fotos.map(foto => <Imagem key={foto.id} foto={foto}/>)}
+                    {fotos.map(foto => <Imagem
+                        aoZoomSolicitado={aoFotoSelecionada}
+                        key={foto.id} 
+                        foto={foto}
+                    />)}
                 </SecaoFluida>
                 <Populares />
             </GaleriaContainer>

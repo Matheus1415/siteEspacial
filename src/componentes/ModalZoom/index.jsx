@@ -1,11 +1,11 @@
 
-export const ModalZoom = () =>{
+export const ModalZoom = ({foto}) =>{
     return(
         <>
-            <dialog>
+            <dialog open={!!foto}>
                 <p>Meu paragrafo</p>
-                <form action="">    
-                    <button>Ok my Friend</button>
+                <form action="dialog">    
+                    <button>fechar Modal</button>
                 </form>
             </dialog>
         </>

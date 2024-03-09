@@ -46,18 +46,18 @@ const Figure = styled.figure`
                 margin: 5px;
             }
 
-            & > #Curtir{  background: transparent url('public/icones/favorito-ativo.png') no-repeat;  }
-            & > #Expandir{  background: transparent url('public/icones/expandir.png') no-repeat;  }
+            & > #Curtir{  background: transparent url('/public/icones/favorito-ativo.png') no-repeat;  }
+            & > #Expandir{  background: transparent url('/public/icones/expandir.png') no-repeat;  }
 
         }
 
     }
 `;
 
-export const Imagem = ({ foto }) => {
+export const Imagem = ({ foto, aoZoomSolicitado }) => {
     return (
         <Figure>
-            <img src={`public/public/${foto.path}`} alt="" />
+            <img src={`public/${foto.path}`} alt="" />
             <figcaption>
                 <span>
                     <h3>{foto.titulo}</h3>
