@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import BotaoIcone from "../../BotaoIcone";
 
 const Figure = styled.figure`
     position: relative;
@@ -64,7 +65,19 @@ export const Imagem = ({ foto, expandida = false, aoZoomSolicitado }) => {
                     <p>{foto.fonte}</p>
                 </span>
                 <footer>
-                    
+                <BotaoIcone>
+                    <img src="/icones/favorito.png" alt="Icone de favorito" />
+                </BotaoIcone>
+
+                {!expandida && 
+                    <BotaoIcone 
+                        aria-hidden={expandida}
+                        onClick={() => aoZoomSolicitado(foto)}
+                    >
+                        <img src="/icones/expandir.png" alt="Icone de expandir" />
+                    </BotaoIcone>
+                }
+
                 </footer>
             </figcaption>
         </Figure>

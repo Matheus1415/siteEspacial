@@ -35,7 +35,7 @@ const ContainerGHaleria = styled.section`
 function App() {
 
   const [fotosGleria,setFotosGaleria] = useState(fotos)
-  const [fotoSelecionada, setFotoSelecionada] = useState(fotos[0])
+  const [fotoSelecionada, setFotoSelecionada] = useState(null)
 
   return (
     <FundoGradiente>
