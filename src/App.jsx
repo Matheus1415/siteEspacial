@@ -50,8 +50,14 @@ const ConteudoGaleria = styled.section`
 `
 
 const App = () => {
+
+  const fotoTitulo = fotos.map(fotos => fotos.titulo)
+
   const [fotosDaGaleria, setFotosDaGaleria] = useState(fotos)
   const [fotoSelecionada, setFotoSelecionada] = useState(null)
+  const [filtroDigitado, setFiltroDigitado] = useState(fotoTitulo)
+  console.log(filtroDigitado)
+
   const aoAlternaFavorito=(foto) =>{
     if(foto.id === fotoSelecionada?.id){
       setFotoSelecionada({
@@ -93,7 +99,8 @@ const App = () => {
         foto={fotoSelecionada}
         aoFechar={() => setFotoSelecionada(null)}
         aoAlternaFavorito={aoAlternaFavorito}
-      />    </FundoGradiente>
+      />    
+    </FundoGradiente>
   )
 }
 

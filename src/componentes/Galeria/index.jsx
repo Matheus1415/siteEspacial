@@ -1,8 +1,9 @@
-import { styled } from "styled-components"
-import Titulo from "../Titulo"
-import Tags from "./Tags"
-import Populares from "./Populares"
-import Imagem from "./Imagem"
+import { styled } from "styled-components";
+import Titulo from "../Titulo";
+import Tags from "./Tags";
+import Populares from "./Populares";
+import Imagem from "./Imagem";
+import { useState } from "react";
 
 const GaleriaContainer = styled.div`
     display: flex;
@@ -12,11 +13,11 @@ const GaleriaContainer = styled.div`
       justify-content: center;
       gap: 10px;
     }
-`
+`;
 
 const SecaoFluida = styled.section`
     flex-grow: 1;
-`
+`;
 
 const ImagensContainer = styled.section`
     display: grid;
@@ -28,30 +29,43 @@ const ImagensContainer = styled.section`
         align-items: center; 
         justify-content: center;
     }
-    
 `;
 
-
 const Galeria = ({ fotos = [], aoFotoSelecionada, aoAlternaFavorito }) => {
+    const [filtro, setFiltro] = useState(fotos);
+
+    const filtrarImagems = (filtroImg) => {
+        if (filtroImg === 0) {
+            setFiltro(fotos);
+        } else {
+            const imagensFiltradas = fotos.filter(foto => {
+                return foto.tagId === filtroImg;
+            });
+            setFiltro(imagensFiltradas);
+        }
+    };
+    
     return (
         <>
-            <Tags />
+            <Tags setFiltro={filtrarImagems} />
             <GaleriaContainer>
                 <SecaoFluida>
                     <Titulo>Navegue pela galeria</Titulo>
                     <ImagensContainer>
-                        {fotos.map(foto => <Imagem 
-                            aoZoomSolicitado={aoFotoSelecionada}
-                            aoAlternaFavorito={aoAlternaFavorito}
-                            key={foto.id} 
-                            foto={foto} />)
-                        }
+                        {filtro.map(foto => (
+                            <Imagem 
+                                aoZoomSolicitado={aoFotoSelecionada}
+                                aoAlternaFavorito={aoAlternaFavorito}
+                                key={foto.id} 
+                                foto={foto} 
+                            />
+                        ))}
                     </ImagensContainer>
                 </SecaoFluida>
                 <Populares />
             </GaleriaContainer>
         </>
-    )
-}
+    );
+};
 
-export default Galeria
+export default Galeria;

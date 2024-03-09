@@ -45,12 +45,16 @@ const Div = styled.div`
     } 
 `
 
-const Tags = () => {
+const Tags = ({setFiltro}) => {
+
+
     return (
         <TagsContainer>
             <TagTitulo>Busque por tags:</TagTitulo>
             <Div>
-                {tags.map(tag => <Tag key={tag.id}>{tag.titulo}</Tag>)}
+                {tags.map(
+                    tag => <Tag key={tag.id} onClick={() => setFiltro(tag.id)}>{tag.titulo}</Tag>
+                )}
             </Div>
         </TagsContainer>
     )    
