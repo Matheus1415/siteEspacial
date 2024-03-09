@@ -54,9 +54,9 @@ const Figure = styled.figure`
     }
 `;
 
-export const Imagem = ({ foto, aoZoomSolicitado }) => {
+export const Imagem = ({ foto, expandida = false, aoZoomSolicitado }) => {
     return (
-        <Figure>
+        <Figure $expandida={expandida} id={`foto-${foto.id}`}>
             <img src={`public/${foto.path}`} alt="" />
             <figcaption>
                 <span>
@@ -64,10 +64,10 @@ export const Imagem = ({ foto, aoZoomSolicitado }) => {
                     <p>{foto.fonte}</p>
                 </span>
                 <footer>
-                    <button id="Curtir"></button>
-                    <button id="Expandir"></button>
+                    
                 </footer>
             </figcaption>
         </Figure>
     );
 };
+
