@@ -4,15 +4,24 @@ import Titulo from "../../Titulo"
 import fotos from './fotos-populares.json'
 
 const ColunaFotos = styled.section`
+    width: 100%; 
     display: flex;
     flex-direction: column;
     gap: 16px;
+
+    @media screen and (max-width: 858px){
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 30px;
+    }
 `
 
 const Imagem = styled.img`
-    max-width: 212px;
+    max-width: 100%; 
     border-radius: 20px;
+    margin: 10px 0;
 `
+
 
 const Botao = styled.button`
     background-color: transparent;

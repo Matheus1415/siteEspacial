@@ -17,20 +17,32 @@ const FundoGradiente = styled.div`
 `
 
 const AppContainer = styled.div`
-  width: 1440px;
+  width: 100%;
+  max-width: 1260px;
   margin: 0 auto;
-  max-width: 100%;
 `
 
 const MainContainer = styled.main`
   display: flex;
   gap: 24px;
+  padding: 10px;
+
+  @media screen and (max-width: 768px){
+      flex-direction: column;
+  }
+
 `
 
 const ConteudoGaleria = styled.section`
+  width: 100%;
+  max-width: 70%;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  
+  @media screen and (max-width: 768px){
+      max-width: 100%;
+  }
 `
 
 const App = () => {

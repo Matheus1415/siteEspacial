@@ -6,16 +6,22 @@ const TagsContainer = styled.section`
     align-items: center;
     gap: 64px;
     margin-top: 56px;
+    @media screen and (max-width: 858px){
+      flex-direction: column;
+      justify-content: center;
+      gap: 10px;
+    }
 `
 
 const TagTitulo = styled.h3`
     color: #D9D9D9;
-    font-size: 24px;
+    font-size: 20px;
     margin: 0;
+    
 `;
 
 const Tag = styled.button`
-    font-size: 24px;
+    font-size: 20px;
     color: #FFFFFF;
     background: rgba(217, 217, 217, 0.3);
     border-radius: 10px;
@@ -36,12 +42,14 @@ const Div = styled.div`
 `
 
 const Tags = () => {
-    return <TagsContainer>
-        <TagTitulo>Busque por tags:</TagTitulo>
-        <Div>
-            {tags.map(tag => <Tag key={tag.id}>{tag.titulo}</Tag>)}
-        </Div>
-    </TagsContainer>
+    return (
+        <TagsContainer>
+            <TagTitulo>Busque por tags:</TagTitulo>
+            <Div>
+                {tags.map(tag => <Tag key={tag.id}>{tag.titulo}</Tag>)}
+            </Div>
+        </TagsContainer>
+    )    
 }
 
 export default Tags

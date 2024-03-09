@@ -7,6 +7,11 @@ import Imagem from "./Imagem"
 const GaleriaContainer = styled.div`
     display: flex;
     gap: 24px;
+    @media screen and (max-width: 1080px){
+      flex-direction: column;
+      justify-content: center;
+      gap: 10px;
+    }
 `
 
 const SecaoFluida = styled.section`
@@ -14,11 +19,18 @@ const SecaoFluida = styled.section`
 `
 
 const ImagensContainer = styled.section`
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 24px;
-`
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 10px;
+
+    @media screen and (max-width: 630px) {
+        grid-template-columns: repeat(1, 1fr);
+        align-items: center; 
+        justify-content: center;
+    }
+    
+`;
+
 
 const Galeria = ({ fotos = [], aoFotoSelecionada }) => {
     return (

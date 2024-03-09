@@ -2,7 +2,7 @@ import { styled } from "styled-components"
 import BotaoIcone from "../../BotaoIcone"
 
 const Figure = styled.figure`
-    width: ${props => props.$expandida ? '90%' : '460px'};
+    width: ${props => props.$expandida ? '90%' : '280px'};
     max-width: 100%;
     margin: 0;
     display: flex;
@@ -28,6 +28,13 @@ const Figure = styled.figure`
             font-size: 16px;
         }
     }
+
+    @media screen and (max-width: 630px) {
+
+        text-align: center;
+        margin: 0 auto;
+    } 
+    
 `
 
 const Rodape = styled.footer`
@@ -37,7 +44,8 @@ const Rodape = styled.footer`
 `
 
 const Imagem = ({ foto, expandida = false, aoZoomSolicitado }) => {
-    return (<Figure $expandida={expandida} id={`foto-${foto.id}`}>
+    return (
+    <Figure $expandida={expandida} id={`foto-${foto.id}`}>
         <img src={foto.path} alt={foto.alt} />
         <figcaption>
             <h3>{foto.titulo}</h3>
@@ -51,7 +59,8 @@ const Imagem = ({ foto, expandida = false, aoZoomSolicitado }) => {
                 </BotaoIcone>}
             </Rodape>
         </figcaption>
-    </Figure>)
+    </Figure>
+    )
 }
 
 export default Imagem

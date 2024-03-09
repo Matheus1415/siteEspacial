@@ -5,7 +5,9 @@ const ListaEstilizada = styled.ul`
     list-style: none;
     padding: 0;
     margin: 0;
-    width: 236px;
+    width: 30%;
+    max-width: 236px;
+
 `
 
 const BarraLateral = () => {

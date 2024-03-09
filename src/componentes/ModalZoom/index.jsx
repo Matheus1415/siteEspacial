@@ -13,11 +13,14 @@ const Overlay = styled.div`
 
 const DialogEstilizado = styled.dialog`
     position: absolute;
-    top: 294px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
     background: transparent;
     padding: 0;
     border: 0;
-    width: 1156px;
+    width: 100%;
+    max-width: 900px;
     display: flex;
     justify-content: center;
     form {
