@@ -1,7 +1,9 @@
-import styled from "styled-components";
+import { styled } from "styled-components";
 
-export const Titulo  = styled.h2`
-    color: #bcbaff;
-    font-size: 32;
-    text-align: ${prop => prop.$Alinhamento? prop.$Alinhamento : 'left'};
-`;
+const Titulo = styled.h2`
+    color: #7B78E6;
+    font-size: 32px;
+    text-align: ${ props => props.$alinhamento ? props.$alinhamento : 'left' };
+`
+    
+export default Titulo

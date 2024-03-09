@@ -1,51 +1,47 @@
-import styled from "styled-components"
-import tags from "./tags.json"
+import { styled } from 'styled-components';
+import tags from './tags.json'
 
-// Defina os styled-components fora da função de componente
-const TagsContainer = styled.div`
+const TagsContainer = styled.section`
     display: flex;
     align-items: center;
-    gap: 15px;
-`;
+    gap: 64px;
+    margin-top: 56px;
+`
 
-const Paragrafo = styled.p`
+const TagTitulo = styled.h3`
+    color: #D9D9D9;
     font-size: 24px;
-    color: white;
+    margin: 0;
 `;
 
-const ContainerButton = styled.div`
-    display: flex;
-    gap: 10px;
-`;
-
-const Button = styled.button`
-    display: inline-block;
-    font-size: 18px;
-    color: white;
-    background-color: rgba(63, 102, 243, 0.3);
+const Tag = styled.button`
+    font-size: 24px;
+    color: #FFFFFF;
+    background: rgba(217, 217, 217, 0.3);
     border-radius: 10px;
     cursor: pointer;
-    transition:  font-size 0.3s ease;
+    transition: background-color 0.3s ease;
     padding: 12px;
     box-sizing: border-box;
     border: 2px solid transparent;
-    width: 100%;
-    max-width: 138px;
-    height: 50px;
-
-    &:hover{
-        font-size: 20px;
-        box-shadow: 1px 5px 10px 5px rgba(0, 16, 75, 0.3);
+    &:hover {
+      border-color: #C98CF1;
     }
-`;
+`
 
-export const Tags = () => {
-    return (
-        <TagsContainer>
-            <Paragrafo>Buscar pro tags:</Paragrafo>
-            <ContainerButton>
-                {tags.map(tag => <Button key={tag.id}>{tag.titulo}</Button>)}   
-            </ContainerButton>
-        </TagsContainer>
-    )
+const Div = styled.div`
+    display: flex;
+    gap: 24px;
+    justify-content: end;
+`
+
+const Tags = () => {
+    return <TagsContainer>
+        <TagTitulo>Busque por tags:</TagTitulo>
+        <Div>
+            {tags.map(tag => <Tag key={tag.id}>{tag.titulo}</Tag>)}
+        </Div>
+    </TagsContainer>
 }
+
+export default Tags
