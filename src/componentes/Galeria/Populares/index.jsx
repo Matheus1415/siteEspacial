@@ -9,7 +9,7 @@ const ColunaFotos = styled.section`
     flex-direction: column;
     gap: 16px;
 
-    @media screen and (max-width: 858px){
+    @media screen and (max-width: 920px){
         display: grid;
         grid-template-columns: repeat(2, 1fr); 
         gap: 30px;

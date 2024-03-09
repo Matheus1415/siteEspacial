@@ -9,12 +9,15 @@ const Overlay = styled.div`
     right: 0;
     bottom: 0;
     left: 0;
+    display: flex;
+    align-items: center;
 `
 
 const DialogEstilizado = styled.dialog`
     position: absolute;
     top: 50%;
     left: 50%;
+    margin: 0 auto;
     transform: translate(-50%,-50%);
     background: transparent;
     padding: 0;
@@ -24,10 +27,14 @@ const DialogEstilizado = styled.dialog`
     display: flex;
     justify-content: center;
     form {
+        width: 0;
         button {
             position: relative;
             top: 20px;
             right: 60px;
+            @media screen and (max-width:615pc) {
+                right: 80px;
+            }
         }
     }
 `

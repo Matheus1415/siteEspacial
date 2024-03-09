@@ -75,6 +75,7 @@ button,
 input { 
   overflow: visible;
 }
+input:focus{outline:none;}
 button,
 select { 
   text-transform: none;

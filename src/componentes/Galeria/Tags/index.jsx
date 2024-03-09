@@ -6,7 +6,7 @@ const TagsContainer = styled.section`
     align-items: center;
     gap: 64px;
     margin-top: 56px;
-    @media screen and (max-width: 858px){
+    @media screen and (max-width: 900px){
       flex-direction: column;
       justify-content: center;
       gap: 10px;
@@ -39,6 +39,10 @@ const Div = styled.div`
     display: flex;
     gap: 24px;
     justify-content: end;
+    @media screen and (max-width: 530px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    } 
 `
 
 const Tags = () => {

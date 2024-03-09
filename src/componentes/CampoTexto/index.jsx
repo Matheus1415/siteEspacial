@@ -24,6 +24,9 @@ const CampoTextoEstilizado = styled.input`
     font-size: 20px;
     line-height: 20px;
 
+    &:focus{
+        box-shadow: 1px 1px 15px 4px #092851;
+    }
     
 `
 
@@ -34,7 +37,7 @@ const IconeLupa = styled.img`
     width: 38px;
     height: 38px;
     @media screen and (max-width: 768px){
-        top: 15px;
+        top: 18px;
         right: 15px;
     }
 `;

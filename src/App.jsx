@@ -14,6 +14,7 @@ const FundoGradiente = styled.div`
   background: linear-gradient(174.61deg, #041833 4.16%, #04244F 48%, #154580 96.76%);
   width: 100%;
   min-height: 100vh;
+  overflow: none;
 `
 
 const AppContainer = styled.div`
@@ -27,8 +28,10 @@ const MainContainer = styled.main`
   gap: 24px;
   padding: 10px;
 
-  @media screen and (max-width: 768px){
+  @media screen and (max-width: 800px){
       flex-direction: column;
+      align-items: center;
+      justify-content: center;
   }
 
 `
@@ -40,7 +43,7 @@ const ConteudoGaleria = styled.section`
   flex-direction: column;
   flex-grow: 1;
   
-  @media screen and (max-width: 768px){
+  @media screen and (max-width: 800px){
       max-width: 100%;
   }
 `
