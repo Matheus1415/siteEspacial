@@ -51,6 +51,21 @@ const ConteudoGaleria = styled.section`
 const App = () => {
   const [fotosDaGaleria, setFotosDaGaleria] = useState(fotos)
   const [fotoSelecionada, setFotoSelecionada] = useState(null)
+  const aoAlternaFavorito=(foto) =>{
+    if(foto.id === fotoSelecionada?.id){
+      setFotoSelecionada({
+        ...fotoSelecionada,
+        favorita:!fotoSelecionada.favorita
+      })
+    }
+
+    setFotosDaGaleria(fotosDaGaleria.map(fotoGaleria =>{
+      return{
+        ...fotoGaleria,
+        favorita: fotoGaleria.id === foto.id? !foto.favorita : fotoGaleria.favorita
+      }
+    }))
+  }
   
   return (
     <FundoGradiente>
@@ -66,6 +81,7 @@ const App = () => {
             />
             <Galeria 
               aoFotoSelecionada={foto => setFotoSelecionada(foto)} 
+              aoAlternaFavorito={aoAlternaFavorito}
               fotos={fotosDaGaleria}
             />
           </ConteudoGaleria>
@@ -74,6 +90,7 @@ const App = () => {
       <ModalZoom 
         foto={fotoSelecionada}
         aoFechar={() => setFotoSelecionada(null)}
+        aoAlternaFavorito={aoAlternaFavorito}
       />
     </FundoGradiente>
   )
