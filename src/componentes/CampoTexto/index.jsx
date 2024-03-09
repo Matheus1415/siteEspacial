@@ -4,7 +4,7 @@ import search from './search.png'
 const ContainerEstilizado = styled.div`
     position: relative;
     display: inline-block;
-    max-width: 90%;
+    max-width: 89%;
 `;
 
 
@@ -17,7 +17,7 @@ const CampoTextoEstilizado = styled.input`
     border-color: #C98CF1;
     background: transparent;
     box-sizing: border-box;
-    width: 560px;
+    width: 530px;
     max-width: 100%;
     color: #D9D9D9;
     font-weight: 400;

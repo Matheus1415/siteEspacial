@@ -9,6 +9,7 @@ import Galeria from "./componentes/Galeria"
 import fotos from './fotos.json'
 import { useState } from "react"
 import ModalZoom from "./componentes/ModalZoom"
+import { Footer } from "./componentes/Footer"
 
 const FundoGradiente = styled.div`
   background: linear-gradient(174.61deg, #041833 4.16%, #04244F 48%, #154580 96.76%);
@@ -18,7 +19,7 @@ const FundoGradiente = styled.div`
 `
 
 const AppContainer = styled.div`
-  width: 100%;
+  max-width: 100%;
   max-width: 1260px;
   margin: 0 auto;
 `
@@ -28,7 +29,7 @@ const MainContainer = styled.main`
   gap: 24px;
   padding: 10px;
 
-  @media screen and (max-width: 800px){
+  @media screen and (max-width: 870px){
       flex-direction: column;
       align-items: center;
       justify-content: center;
@@ -85,14 +86,14 @@ const App = () => {
               fotos={fotosDaGaleria}
             />
           </ConteudoGaleria>
-        </MainContainer>
+        </MainContainer>  
+          <Footer/>
       </AppContainer>
       <ModalZoom 
         foto={fotoSelecionada}
         aoFechar={() => setFotoSelecionada(null)}
         aoAlternaFavorito={aoAlternaFavorito}
-      />
-    </FundoGradiente>
+      />    </FundoGradiente>
   )
 }
 

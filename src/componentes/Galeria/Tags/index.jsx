@@ -6,7 +6,7 @@ const TagsContainer = styled.section`
     align-items: center;
     gap: 64px;
     margin-top: 56px;
-    @media screen and (max-width: 900px){
+    @media screen and (max-width: 930px){
       flex-direction: column;
       justify-content: center;
       gap: 10px;
