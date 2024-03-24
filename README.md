@@ -10,7 +10,7 @@ Atualmente, dois plugins oficiais estão disponíveis:
 ## 🌌 Sobre o Projeto
 
 O **Space Explorer** é um site com temática espacial onde os usuários podem explorar fotos de galáxias, luas e planetas. A aplicação é uma single-page, apresentando uma única página estática. Os usuários podem filtrar as imagens por tags ou realizar uma pesquisa.
-[foto do site](https://github.com/Matheus1415/siteEspacial/blob/main/readmFoto.png)
+![foto do site](https://github.com/Matheus1415/siteEspacial/blob/main/readmFoto.png)
 
 ## 🚀 Como Instalar
 
