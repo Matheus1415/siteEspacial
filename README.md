@@ -19,13 +19,13 @@ Para instalar e executar o **Space Explorer**, siga estas etapas:
 1. Clone o repositório:
 
     ```bash
-    git clone https://github.com/seu-usuario/space-explorer.git
+    git clone https://github.com/Matheus1415/siteEspacial
     ```
 
 2. Acesse o diretório do projeto:
 
     ```bash
-    cd space-explorer
+    cd siteEspacial
     ```
 
 3. Instale as dependências:
@@ -43,7 +43,6 @@ Para instalar e executar o **Space Explorer**, siga estas etapas:
 Isso iniciará o servidor de desenvolvimento e você poderá acessar o site em `http://localhost:3000`.
 
 ### 🛠️ Tecnologias Utilizadas
-
-</br> [React](https://pt-br.legacy.reactjs.org/docs/getting-started.html) 
+[React](https://pt-br.legacy.reactjs.org/docs/getting-started.html) 
 </br> [TypeScript](https://www.typescriptlang.org/pt/docs/)
 </br> [Sass](https://sass-lang.com/documentation/) 
